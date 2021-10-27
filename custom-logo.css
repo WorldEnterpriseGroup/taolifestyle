@@ -1,0 +1,16 @@
+
+.ptb-39{
+  padding-top: 39px;
+}
+@media (max-width: 767px) {
+  .ptb-39{
+    padding-bottom: 39px;
+  }
+}
+
+.stick .ptb-39 {
+  padding-top: 13px;
+}
+.stick .logo.ptb-39 img {
+  width: 230px;
+}

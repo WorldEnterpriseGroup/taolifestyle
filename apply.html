@@ -24,7 +24,7 @@
          <!-- custom CSS built by krashnik
         ============================================ -->            
         <link rel="stylesheet" href="custom.css">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
@@ -388,14 +388,14 @@
                         <!-- End section title -->
                         <div class="col-sm-12">
                             <div class="contact-form">
-                                <form method="POST" action="#">
+                                <form id="applyform" method="POST" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8">
                                     <div class="form-fields">
                                         <!-- <label for="name">First Name</label> -->
-                                        <input id="name" name="name" type="text" placeholder="First Name">
+                                        <input id="name" name="firstname" type="text" placeholder="First Name">
                                     </div>
                                     <div class="form-fields">
                                         <!-- <label for="name">Last Name</label> -->
-                                        <input id="name" name="name" type="text" placeholder="Last Name">
+                                        <input id="lastname" name="lastname" type="text" placeholder="Last Name">
                                     </div>
                                     <div class="form-fields last">
                                         <!-- <label for="email">Email</label> -->
@@ -404,30 +404,45 @@
                                     <div class="message-fields"></div> <!-- ADDED TO MAKE GAP -->
                                     <div class="form-fields">
                                         <!-- <label for="phone">Phone</label> -->
-                                        <input id="phone" name="phone" type="text" placeholder="Phone Number">
+                                        <input id="phone" name="tel" type="text" placeholder="Phone Number">
                                     </div>
                                     <div class="form-fields">
                                         <!-- <label for="phone">Phone</label> -->
-                                        <input id="resume" name="resume" type="text" placeholder="Link to Resume or Portfolio">
+                                        <input id="resume" name="link" type="text" placeholder="Link to Resume or Portfolio">
                                     </div>
                                     <div class="form-fields last">
                                         <!-- <label for="membership_type">Membership Type</label> -->
-                                        <select class="form-control selectpicker" aria-label="membership_type" name="membership_type">
+                                        <select class="form-control selectpicker" aria-label="membership_type" name="interest">
                                             <option value = "" selected>-- Choose a Membership --</option>
-                                            <option value = "Digital Membership">Digital Membership</option>
-                                            <option value = "Ecovillage Resident">EcoVillage Resident</option>
-                                            <option value = "EcoVillage Director">EcoVillage Director</option>
+                                            <option value = "EResidency">E-Residency</option>
+                                            <option value = "Residency">Residency</option>
+                                            <option value = "Citizenship">Citizenship</option>
                                         </select>
                                     </div>
                                     
                                     <div class="message-fields">
                                         <!-- <label for="mess">Message</label> -->
-                                        <textarea name="mess" id="mess" cols="30" rows="3" placeholder="Tell us why you'd like to join Tao Lifestyle"></textarea>
+                                        <textarea name="information" id="mess" cols="30" rows="3" placeholder="Tell us why you'd like to join Tao Lifestyle"></textarea>
                                     </div>
                                     <div class=" text-center">
                                         <br>
-                                        <label><input type="checkbox" name="checkpolicy" id="checkpolicy" class="required form-check-input" >&nbsp;I accept the terms and conditions and general policy.</label>
+                                        <label><input type="checkbox" name="policy_terms" id="policy_terms" class="required form-check-input" >&nbsp;I accept the terms and conditions and general policy.</label>
                                     <br>
+
+
+                                    <input type="hidden" name="test" value="on">
+                                    <input type="hidden" name="test2" value="off">
+                                    <input type="hidden" name="rating" value="3">
+                                    <input type="hidden" name="owner" value="39e8bf44-7e37-ec11-b6e6-6045bd005c39">
+                                    <input type="hidden" name="website" value="https://taolifestyle.org">
+                                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                    <input type="text" name="_gotcha" style="display:none" />
+                                    <input type="hidden" name="budget" value="30000">
+                                    <input type="hidden" name="campaign" value="Tao Lifestyle">
+                                    <input type="hidden" name="topic" value="Application">
+                                    <input type="hidden" name="pageName" value="register">
+                                    <input type="hidden" name="token" value="">
+                                    <input type="hidden" name="formType" value="registration">
 
                                     </div>
                                     <div class="form-button text-center">
@@ -630,6 +645,7 @@
 		============================================ -->           
         <script src="js/main.js"></script>
 
+        <script src="sweetalert2.all.min.js"></script>
 
     </body>
 </html>

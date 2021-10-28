@@ -24,7 +24,10 @@
          <!-- custom CSS built by krashnik
         ============================================ -->            
         <link rel="stylesheet" href="custom.css">
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="js/sweetalert2/dist/sweetalert2.min.css">
+        
+	    <script src="https://www.google.com/recaptcha/api.js?render=6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO"></script>
+        
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
@@ -389,30 +392,30 @@
                         <div class="col-sm-12">
                             <div class="contact-form">
                                 <form id="applyform" method="POST" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8">
-                                    <div class="form-fields">
+                                    <div class="form-fields form-group">
                                         <!-- <label for="name">First Name</label> -->
-                                        <input id="name" name="firstname" type="text" placeholder="First Name">
+                                        <input id="firstname" name="firstname" type="text" class="form-control" placeholder="First Name">
                                     </div>
-                                    <div class="form-fields">
+                                    <div class="form-fields form-group">
                                         <!-- <label for="name">Last Name</label> -->
-                                        <input id="lastname" name="lastname" type="text" placeholder="Last Name">
+                                        <input id="lastname" name="lastname" type="text" class="form-control" placeholder="Last Name">
                                     </div>
-                                    <div class="form-fields last">
+                                    <div class="form-fields form-group last">
                                         <!-- <label for="email">Email</label> -->
-                                        <input id="email" name="email" type="text" placeholder="Email">
+                                        <input id="email" name="email" type="text" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="message-fields"></div> <!-- ADDED TO MAKE GAP -->
-                                    <div class="form-fields">
+                                    <div class="form-fields form-group">
                                         <!-- <label for="phone">Phone</label> -->
-                                        <input id="phone" name="tel" type="text" placeholder="Phone Number">
+                                        <input id="tel" name="tel" type="text" class="form-control" placeholder="Phone Number">
                                     </div>
-                                    <div class="form-fields">
+                                    <div class="form-fields form-group">
                                         <!-- <label for="phone">Phone</label> -->
-                                        <input id="resume" name="link" type="text" placeholder="Link to Resume or Portfolio">
+                                        <input id="link" name="link" type="text" class="form-control" placeholder="Link to Resume or Portfolio">
                                     </div>
-                                    <div class="form-fields last">
+                                    <div class="form-fields form-group last">
                                         <!-- <label for="membership_type">Membership Type</label> -->
-                                        <select class="form-control selectpicker" aria-label="membership_type" name="interest">
+                                        <select id="interest" class="form-control selectpicker" aria-label="membership_type" name="interest">
                                             <option value = "" selected>-- Choose a Membership --</option>
                                             <option value = "EResidency">E-Residency</option>
                                             <option value = "Residency">Residency</option>
@@ -420,9 +423,9 @@
                                         </select>
                                     </div>
                                     
-                                    <div class="message-fields">
+                                    <div class="message-fields form-group">
                                         <!-- <label for="mess">Message</label> -->
-                                        <textarea name="information" id="mess" cols="30" rows="3" placeholder="Tell us why you'd like to join Tao Lifestyle"></textarea>
+                                        <textarea name="information" id="information" cols="30" rows="3" class="form-control" placeholder="Tell us why you'd like to join Tao Lifestyle"></textarea>
                                     </div>
                                     <div class=" text-center">
                                         <br>
@@ -535,7 +538,7 @@
                                         </div>
                                         <div class="newslater">
                                             <form id="mc-form" class="mc-form form">
-                                                <input id="mc-email" type="email" autocomplete="off"  placeholder="Email Address">
+                                                <input id="mc-email" type="email" autocomplete="off"  class="form-control" placeholder="Email Address">
                                                 <button id="mc-submit" type="submit"><i class="fa fa-envelope" aria-hidden="true"></i></button>
                                             </form>
                                             <!-- mailchimp-alerts Start -->
@@ -644,8 +647,10 @@
    		<!-- main js
 		============================================ -->           
         <script src="js/main.js"></script>
-
-        <script src="sweetalert2.all.min.js"></script>
+        
+	    <script src="js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+        <script src='js/validate.min.js'></script>
+        <script src='js/custom.support.validate.js'></script>
 
     </body>
 </html>

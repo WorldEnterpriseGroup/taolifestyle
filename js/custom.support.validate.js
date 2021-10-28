@@ -25,9 +25,6 @@ let constraints = {
             message: "can only contain digits"
         }
     },
-    location: {
-        presence: true,
-    },
     interest: {
         presence: true
     }
@@ -42,7 +39,7 @@ inputs.forEach( input => {
 )
 
 
-var form = document.querySelector("form#contactus");
+var form = document.querySelector("form#applyform");
 form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     handleFormSubmit(form);
@@ -128,7 +125,7 @@ function resetForm(){
     document.querySelectorAll('div.form-group.has-success').forEach(formGroup => {
         formGroup.classList.remove('has-success');
     })
-    document.querySelectorAll('#contactus input.form-control, select.form-control, textarea').forEach(input => {
+    document.querySelectorAll('#applyform input.form-control, select.form-control, textarea').forEach(input => {
         input.value = '';
     })
 }
@@ -138,7 +135,7 @@ function showSuccess() {
     grecaptcha.ready(function () {
         grecaptcha.execute("6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO").then(function (token) {
             document.querySelector('input[name=token]').value = token;
-            let a = $('form#contactus');
+            let a = $('form#applyform');
             $.ajax({
                 type: a.attr('method'),
                 url: a.attr('action'),
@@ -147,9 +144,9 @@ function showSuccess() {
                     console.log(xhr.status)
                     if (xhr.status === 200) {
                         swal.fire({
-                            title: "Thank You!",
+                            title: "1st Step Complete!",
                             type: "success",
-                            confirmButtonText: 'Ok'
+                            confirmButtonText: 'Continue'
                         });
                         resetForm();
                     } else {

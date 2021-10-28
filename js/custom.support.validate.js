@@ -147,7 +147,11 @@ function showSuccess() {
                             title: "1st Step Complete!",
                             type: "success",
                             confirmButtonText: 'Continue'
-                        });
+                        }).then(function(isConfirm) {
+                            if (isConfirm) {
+                                window.location.replace("apply2.html");
+                            }
+                          });
                         resetForm();
                     } else {
                         swal.fire({

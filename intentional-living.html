@@ -818,32 +818,8 @@
 
         
 	    <script src="js/sweetalert2/dist/sweetalert2.all.min.js"></script>
-            <script>
-               Swal.fire({
-                    title: '<strong>Disclaimer</strong>&nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i>',
-                    icon: 'info',
-                    html:
-                        'The photos and writing on this page are not accurate.<br>The layout is correct.<br><br> ' +
-                        'You may contribute by editing the file directly on Github ' +
-                        'if you would like to help.',
-                    showCloseButton: false,
-                    showCancelButton: true,
-                    focusConfirm: true,
-                    confirmButtonText:
-                        '<i class="fa fa-github" aria-hidden="true"></i> Edit on Github',
-                    confirmButtonAriaLabel: 'Github!',
-                    cancelButtonText:
-                        'Hide Notification',
-                    cancelButtonAriaLabel: 'Thumbs down'
-                    }).then(function(isConfirm) {
-                            if (isConfirm) {
-                                var repo = 'TaoFruit/taolifestyle';
-                                var curPage = document.URL.split('/').pop();
-                                var editPage = 'https://github.com/' + repo + '/blob/gh-pages/' + curPage;
-                                window.open(editPage);
-                            }
-                          });
-            </script>
+            
+	    <script src="js/iguana_notify.js"></script>
 
     </body>
 </html>

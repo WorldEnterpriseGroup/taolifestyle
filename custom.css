@@ -59,3 +59,9 @@ textarea.form-control{
 	resize: none;
 	height: 210px;
 }
+
+.page-title-area1 {
+  background: rgba(0, 0, 0, 0) url("img/1920x350/coffeedark.jpg") repeat scroll 0 0 / cover ;
+  padding: 150px 0 90px;
+  position: relative;
+}

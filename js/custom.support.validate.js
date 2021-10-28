@@ -144,7 +144,7 @@ function showSuccess() {
                     console.log(xhr.status)
                     if (xhr.status === 200) {
                         swal.fire({
-                            title: "1st Step Complete!",
+                            title: "1 of 2 Complete!",
                             type: "success",
                             confirmButtonText: 'Continue'
                         }).then(function(isConfirm) {

@@ -1,4 +1,4 @@
-    // IGUANA HIVE NOTIFICATION
+    // IGNITE CURIOSITY NOTIFICATION
 
     // Include this file on a page when you have Sweet Alert 2 installed 
     // to notify users that you would like them to help fix the page on Github. 
@@ -9,8 +9,8 @@
     var curPage = document.URL.split('/').pop(); // Automatically gets the name of the file.  Currently doesn't work on sub-domains or subfolders.
 
     Swal.fire({
-        title: '<strong>Disclaimer</strong>&nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i>',
-        icon: 'info',
+        title: '<img src="https://ignitecuriosity.org/images/bolt.svg" width="8px">&nbsp;<strong>Ignite Your Curiosity</strong>',
+        icon: '',
         html:
             'The photos and writing on this page are not accurate.<br>The layout is correct.<br><br> ' +
             'You may contribute by editing the file directly on Github ' +

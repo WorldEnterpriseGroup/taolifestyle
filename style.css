@@ -38,13 +38,13 @@
 /*----------------------------------------*/
 /*  1. Theme default CSS
 /*----------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700|Roboto:400,700');
 @font-face {
     font-family: 'latomedium';
     src: url('fonts/lato-medium-webfont.woff2') format('woff2'),
          url('fonts/lato-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 html, body {height: 100%;}
 .floatleft {float:left}
@@ -635,7 +635,7 @@ h1.title1 {
 /*  5. Help us area CSS
 /*----------------------------------------*/
 .help-us-area {
-  background: rgba(0, 0, 0, 0) url("img/help-us-bg.jpg") repeat fixed 0 0;
+  background: rgba(0, 0, 0, 0) url("img/help-us-bg.webp") repeat fixed 0 0;
   color: #fff;
 }
 .section-title-style-two.text-center {
@@ -728,7 +728,7 @@ h1.title1 {
 /*  7. Countdown area CSS
 /*----------------------------------------*/
 .countdown-area {
-  background: rgba(0, 0, 0, 0) url("img/count-down-bg.jpg") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("img/count-down-bg.webp") repeat scroll 0 0;
 }
 .countdown-side-area {
   margin-top: 35px;
@@ -834,7 +834,7 @@ h1.title1 {
 /*  9. People says area CSS
 /*----------------------------------------*/
 .people-says-area {
-  background: rgba(0, 0, 0, 0) url("img/peopule-say-bg.jpg") repeat scroll 0 0 / cover ;
+  background: rgba(0, 0, 0, 0) url("img/peopule-say-bg.webp") repeat scroll 0 0 / cover ;
 }
 .single-people {
   margin: auto;
@@ -1246,7 +1246,7 @@ h1.title1 {
 }
 /* fiinish project */
 .finish-project {
-  background: rgba(0, 0, 0, 0) url("img/about/finish-project.jpg") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("img/about/finish-project.webp") repeat scroll 0 0;
 }
 .single-project h2 {
   color: #fff;
@@ -1690,7 +1690,7 @@ line-height: 36px;}
 /*  18. Error page area CSS
 /*----------------------------------------*/
 .error-page-area {
-  background: rgba(0, 0, 0, 0) url("img/404-bg.jpg") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("img/404-bg.webp") repeat scroll 0 0;
 }
 .error-content h1 {
   color: #fff;
@@ -2091,7 +2091,7 @@ line-height: 36px;}
 }
 /* hiro unit css */
 .hiro-unit-area {
-  background: rgba(0, 0, 0, 0) url("img/peopule-say-bg.jpg") repeat fixed 0 0;
+  background: rgba(0, 0, 0, 0) url("img/peopule-say-bg.webp") repeat fixed 0 0;
   color: rgb(255, 255, 255);
 }
 .hiro-unit-area h1 {
@@ -2116,4 +2116,14 @@ line-height: 36px;}
   line-height: 30px;
   padding-bottom: 8px;
   text-transform: capitalize;
+}
+
+/* Reserve the slider's space before the slider script has run (all slides are 1920x750), avoids a layout shift. */
+#ma-inivoslider-banner7 { aspect-ratio: 1920 / 750; }
+
+/* Before the menu script has run, keep the mobile header the height it has afterwards (the script collapses the
+   full nav list into a 54px bar), so the page does not jump when the script finishes. */
+@media (max-width: 991px) and (scripting: enabled) {
+  .mobile-menu-area { min-height: 54px; }
+  .mobile-menu-area nav#dropdown { display: none; }
 }
